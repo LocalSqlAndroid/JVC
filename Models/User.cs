@@ -3,7 +3,10 @@
     public class User
     {
 
-        public int Id { get; set; }
-        public string Username { get; set; }
+        public string customer { get; set; }
+        public string batchNo { get; set; }
+        public string shadeNo { get; set; }
+        public string machine { get; set; }
+        public string age { get; set; }
     }
 }
