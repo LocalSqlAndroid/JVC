@@ -14,7 +14,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0-nanoserver-1809 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY SqlServerApi/SqlServerApi.csproj SqlServerApi/
+COPY ["SqlServerApi/SqlServerApi.csproj", "SqlServerApi/"]
 RUN dotnet restore "./SqlServerApi/SqlServerApi.csproj"
 COPY . .
 WORKDIR "/src/SqlServerApi"
